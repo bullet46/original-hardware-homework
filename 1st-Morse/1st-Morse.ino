@@ -64,16 +64,17 @@ void loop()
           morse_s += char(MORSE[int(str[i] - 97)][t]);
         }
       }
-      //每段Morse之后补空格
-      morse_s += ' ';
+      //每段Morse之后补斜杠(表字母结束)或空格(表单词结束)
+      if (str[i]=!' ')morse_s += '/';
+      else morse_s += ' ';
     }
-    Serial.println(morse_s);  //串口传入
+    Serial.println(morse_s);  //串口传出
     for (i = 0; morse_s[i] != '\0' ; i++) //从头到尾读取莫尔斯电码
     {
       if (morse_s[i] == '.')morse.dot();
       else if (morse_s[i] == '-')morse.dash();
       else if (morse_s[i] == ' ')morse.w_space();
-      if (morse_s[i] != ' ' && str[i] != '*')morse.c_space();
+      else if (morse_s[i] == '/')morse.c_space();
     }
     Serial.println("发送完毕");
     delay(2);
