@@ -56,10 +56,10 @@ void loop()
     //查询Morse电码表并进行转换
     for (i = 0; i < n; i++)
     {
-      for (t = 0; t < 4; t++)
+      //判断是否为小写字母，如果是则转义
+      if (str[i] >= 97 && str[i] <= 122)
       {
-        //判断是否为小写字母，如果是则转义
-        if (str[i] >= 97 && str[i] <= 122)
+        for (t = 0; t < 4; t++)
         {
           morse_s += char(MORSE[int(str[i] - 97)][t]);
         }
@@ -68,7 +68,7 @@ void loop()
       morse_s += ' ';
     }
     Serial.println(morse_s);  //串口传入
-    for (i = 0; morse_s[i]!='\0' ; i++)//从头到尾读取莫尔斯电码
+    for (i = 0; morse_s[i] != '\0' ; i++) //从头到尾读取莫尔斯电码
     {
       if (morse_s[i] == '.')morse.dot();
       else if (morse_s[i] == '-')morse.dash();
