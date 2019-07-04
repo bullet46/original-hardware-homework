@@ -65,8 +65,8 @@ void loop()
         }
       }
       //每段Morse之后补斜杠(表字母结束)或空格(表单词结束)
-      if (str[i]=!' ')morse_s += '/';
-      else morse_s += ' ';
+      if (int(str[i])!=32){morse_s += '/';}
+      else{ morse_s += ' ';}
     }
     Serial.println(morse_s);  //串口传出
     for (i = 0; morse_s[i] != '\0' ; i++) //从头到尾读取莫尔斯电码
