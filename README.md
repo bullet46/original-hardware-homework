@@ -13,4 +13,6 @@
 ##### [1.七段显示模块进阶控制](https://github.com/bullet46/original-hardware-homework/tree/master/3rd-Digital-display-update)
 ##### [2.不使用库函数的Morse码](https://github.com/bullet46/original-hardware-homework/tree/master/4th-Morse-Without-head)
 ---
+## 心得体会：
+##### [心得体会](心得体会.md)
 ### 完成情况：100%
