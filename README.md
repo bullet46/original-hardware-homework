@@ -14,5 +14,6 @@
 ##### [2.不使用库函数的Morse码](https://github.com/bullet46/original-hardware-homework/tree/master/4th-Morse-Without-head)
 ---
 ## 心得体会：
-##### [心得体会](心得体会.md)
+##### [1.心得体会](心得体会.md)
+##### [2.自学51单片机的一些笔记](一些51单片机的学习记录)
 ### 完成情况：100%
